@@ -1,4 +1,3 @@
-/* src/App.css */
 * {
   box-sizing: border-box;
 }
@@ -76,4 +75,10 @@ button {
   border-radius: 8px;
   background-color: #1a1a1a;
   border: 1px solid transparent;
+}
+
+.stack {
+  display: flex;
+  flex-flow: column-reverse;
+  justify-content: flex-start;
 }

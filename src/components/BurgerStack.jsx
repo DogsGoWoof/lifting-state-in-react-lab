@@ -1,6 +1,18 @@
 // `src/components/BurgerStack.jsx`
-const BurgerStack = (props) => {
-    return <ul>// map through props.ingredients</ul>;
+const BurgerStack = ({stack, handleIngredient, add }) => {
+    return (
+        <ul className="stack">
+            {
+                stack.map((ingredient, index) => (
+                    // <li key={index} style={{background: `${ingredient.color}`}}>
+                    <li key={index} style={{background: `${ingredient.color}`}}>
+                        {ingredient.name}
+                        <button onClick={() => handleIngredient(ingredient, index, add)}>{ add ? '+' : '-'}</button>
+                    </li>
+                ))
+            }
+        </ul>
+    );
 };
 
 export default BurgerStack;
