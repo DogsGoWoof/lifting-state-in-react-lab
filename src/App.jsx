@@ -39,12 +39,14 @@ const App = () => {
     <main>
       <>
         <h1>
-          <hr id="topBun" />
-          <hr id="tomato" />
-          <hr id="lettuce" />
-          <hr id="cheese" />
-          <span id="title">Burger Stacker</span>
-          <hr id="bottomBun" />
+          <div id="burgerBox">
+            <hr id="topBun" />
+            <hr id="tomato" />
+            <hr id="lettuce" />
+            <hr id="cheese" />
+            <span id="title">Burger Stacker</span>
+            <hr id="bottomBun" />
+          </div>
         </h1>
       </>
       <section>

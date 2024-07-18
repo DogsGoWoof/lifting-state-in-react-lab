@@ -1,12 +1,18 @@
+@keyframes stackingTopBun {
+  50% {
+    margin: 0 0 2dvh 0;
+  }
+}
+
 @keyframes stacking {
   50% {
     margin: 2dvh 0;
   }
 }
 
-@keyframes stacking2 {
+@keyframes stackingBottomBun {
   50% {
-    margin: 4dvh 0;
+    margin: 2dvh 0 0 0;
   }
 }
 
@@ -157,10 +163,17 @@ h1 {
   background: yellow;
   -webkit-text-stroke: .2dvh #000;
   -webkit-text-fill-color: #fff;
-  padding: 4.5dvh 3dvw;
+  padding: 3.5dvh 3dvw;
   display: flex;
-  flex-flow: column wrap;;
-  width: 80%
+  flex-flow: column wrap;
+  width: 80%;
+  max-width: 510px;
+  min-width: 450px;
+  aspect-ratio: 0.8;
+}
+
+#burgerBox {
+  translate: 0 8dvh;
 }
 
 hr {
@@ -174,12 +187,15 @@ hr:hover {
 }
 
 #topBun {
-  /* position: fixed; */
   width: 100%;
   height: 25dvh;
-  background: brown;
+  background: saddlebrown;
   border: 2px solid black;
   border-radius: 50dvh 50dvh 0 0;
+}
+
+#topBun:hover {
+  animation: stackingTopBun 2s 1;
 }
 
 #tomato {
@@ -216,15 +232,19 @@ hr:hover {
   border-radius: 2dvh;
 }
 
+#title:hover {
+  animation: stacking 2s 1;
+}
+
 #bottomBun {
   width: 100%;
   height: 10dvh;
-  background: brown;
+  background: saddlebrown;
   border: 2px solid black;
   border-radius: 0 0 4dvh 4dvh;
   z-index: 1;
 }
 
 #bottomBun:hover {
-  animation: stacking2 2s 1;
+  animation: stackingBottomBun 2s 1;
 }
