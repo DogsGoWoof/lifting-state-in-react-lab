@@ -1,17 +1,18 @@
-// src/components/IngredientList.jsx
-import React from "react";
+import Ingredient from "./Ingredient";
+
 const IngredientList = ({ ingredients, handleIngredient, add }) => {
-
-    // console.log(ingredients);
-
     return (
-        <ul>
+        <ul className="ingredientsList">
             {
                 ingredients.map((ingredient, index) => (
-                    <li key={index} style={{background: `${ingredient.color}`}}>
-                        {ingredient.name}
-                        <button onClick={() => handleIngredient(ingredient, index, add)}>{ add ? '+' : '-'}</button>
-                    </li>
+                    <Ingredient 
+                    key={index} 
+                    ingredient={ingredient}
+                    handleIngredient={handleIngredient}
+                    add={add}
+                    index={index}
+                    cssClass="ingredients"
+                    />
                 ))
             }
         </ul>

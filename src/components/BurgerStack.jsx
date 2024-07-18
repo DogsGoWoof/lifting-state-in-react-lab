@@ -1,14 +1,23 @@
-// `src/components/BurgerStack.jsx`
+import Ingredient from "./Ingredient";
+
 const BurgerStack = ({stack, handleIngredient, add }) => {
+    if (stack.length === 0) {
+        return <ul className="stack" style={{alignItems: "center"}}>
+            <li key="noIngredients" style={{textAlign: 'center', fontSize: '5dvh', lineHeight: '1', color: 'white', border: 'none'}}>No Ingredients</li>
+            </ul>;
+    }
     return (
         <ul className="stack">
             {
                 stack.map((ingredient, index) => (
-                    // <li key={index} style={{background: `${ingredient.color}`}}>
-                    <li key={index} style={{background: `${ingredient.color}`}}>
-                        {ingredient.name}
-                        <button onClick={() => handleIngredient(ingredient, index, add)}>{ add ? '+' : '-'}</button>
-                    </li>
+                    <Ingredient 
+                    key={index} 
+                    ingredient={ingredient}
+                    handleIngredient={handleIngredient}
+                    add={add}
+                    index={index}
+                    cssClass="stackIngredients"
+                    />
                 ))
             }
         </ul>

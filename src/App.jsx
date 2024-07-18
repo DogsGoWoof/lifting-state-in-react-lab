@@ -23,7 +23,7 @@ const App = () => {
     { name: 'Onion', color: 'lightyellow' },
     { name: 'Cheddar Cheese', color: '#FDE18B' },
     { name: 'Swiss Cheese', color: '#F1E1A8' },
-  ]); 
+  ]);
 
   const handleIngredient = (ingredient, index, add) => {
     if (!add) {
@@ -37,7 +37,16 @@ const App = () => {
 
   return (
     <main>
-      <h1>Burger Stacker</h1>
+      <>
+        <h1>
+          <hr id="topBun" />
+          <hr id="tomato" />
+          <hr id="lettuce" />
+          <hr id="cheese" />
+          <span id="title">Burger Stacker</span>
+          <hr id="bottomBun" />
+        </h1>
+      </>
       <section>
         <IngredientList ingredients={availableIngredients} handleIngredient={handleIngredient} add={true} />
         <BurgerStack stack={stack} handleIngredient={handleIngredient} add={false} />
