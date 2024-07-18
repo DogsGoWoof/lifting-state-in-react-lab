@@ -1,18 +1,24 @@
 @keyframes stackingTopBun {
   50% {
-    margin: 0 0 2dvh 0;
+    margin: .1dvh .1dvh 2dvh .1dvh;
   }
 }
 
 @keyframes stacking {
   50% {
-    margin: 2dvh 0;
+    margin: 2dvh .1dvh;
+  }
+}
+
+@keyframes stackingPatty {
+  50% {
+    margin: 2dvh .0;
   }
 }
 
 @keyframes stackingBottomBun {
   50% {
-    margin: 2dvh 0 0 0;
+    margin: 2dvh .1dvh .1dvh .1dvh;
   }
 }
 
@@ -163,7 +169,7 @@ h1 {
   background: yellow;
   -webkit-text-stroke: .2dvh #000;
   -webkit-text-fill-color: #fff;
-  padding: 3.5dvh 3dvw;
+  padding: 0 3dvw;
   display: flex;
   flex-flow: column wrap;
   width: 80%;
@@ -233,7 +239,7 @@ hr:hover {
 }
 
 #title:hover {
-  animation: stacking 2s 1;
+  animation: stackingPatty 2s 1;
 }
 
 #bottomBun {
